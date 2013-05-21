@@ -2,7 +2,7 @@
 " 穿越中文输入法 (Vim 版本)
 " Author: Cyrus Baow <cy2081@baow.com>
 " Last Change:	2013 Feb 27
-" Release Version: 2.2
+" Release Version: 2.3
 " License: GPL
 "
 " 主页：http://2081.baow.com/
