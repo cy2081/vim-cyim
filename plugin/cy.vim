@@ -1,8 +1,8 @@
 " CY Input Method for Chinese
 " 穿越中文输入法 (Vim 版本)
 " Author: Cyrus Baow <cy2081@baow.com>
-" Last Change:	2013 Feb 27
-" Release Version: 2.3
+" Last Change:	2013-05-22 
+" Release Version: 2.5
 " License: GPL
 "
 " 主页：http://2081.baow.com/
@@ -22,7 +22,7 @@
 " 快捷键
 " ------
 "
-"   <Ctrl-\> 输入法开关.
+"   <F4> 输入法开关.
 "   <Ctrl-d> 取消当前的中文候选
 "
 "   <Ctrl-h> 和 <Backspace> 一样，用于删除前边输入的字母，为了方便
