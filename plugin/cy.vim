@@ -22,7 +22,7 @@
 " 快捷键
 " ------
 "
-"   <F4> 输入法开关.
+"   <Ctrl-\> 输入法开关.
 "   <Ctrl-d> 取消当前的中文候选
 "
 "   <Ctrl-h> 和 <Backspace> 一样，用于删除前边输入的字母，为了方便
@@ -93,7 +93,7 @@ let g:cy_search_brave = 1 " 是否使用CY搜索方式，1 表示打开，0 表�
 
 " --------------------------------------------------------------------
 " 快捷键和参数设置 {{{
-let s:cy_switch_key = "<F4>"  "输入法开关
+let s:cy_switch_key = "\<C-\>"  "输入法开关
 let s:cy_find_input_key = "\<C-f>"    "设置搜索词
 let s:cy_cancle_key = "\<C-d>"   "取消当前输入
 let s:cy_input_pre_key = "\<C-s>"   "连续输入时只输入前置字符
