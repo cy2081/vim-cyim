@@ -1,11 +1,11 @@
 " CY Input Method for Chinese
 " 穿越中文输入法 (Vim 版本)
-" Author: Cyrus Baow <cy2081@baow.com>
-" Last Change:	2013-05-22 
-" Release Version: 2.5
+" Author: Cyrus Baow <cy@baow.com>
+" Last Change:	2014-12-08 
+" Release Version: 3.6
 " License: GPL
 "
-" 主页：http://2081.baow.com/
+" 主页：http://www.baow.com/help/cyim
 "
 " {{{
 "
@@ -16,18 +16,18 @@
 " 安装方法
 " --------
 "
-"     把文件复制放到 plugin 目录下即可
+"     把文件复制放到 Vim 的 plugin 目录下即可
 "
 "
 " 快捷键
 " ------
 "
-"   <Ctrl-\> 输入法开关.
+"   <Alt-x> 默认输入法开关，在终端模式中，可设置为 <Ctrl-\> 等
 "   <Ctrl-d> 取消当前的中文候选
 "
 "   <Ctrl-h> 和 <Backspace> 一样，用于删除前边输入的字母，为了方便
 "   还可选用<Ctrl-Space>
-"
+"ab
 "   <Ctrl-^> 显示菜单，设置输入法:
 "    (m) 码表切换
 "    (.) 中英标点切换
@@ -41,13 +41,13 @@
 "   ,f 开始全屏定位
 "
 "   <Ctrl-s> 输入前置字符
-"   <Alt-u> 删除刚才新输入的字词
-"   \ 中英文切换
+"   <Ctrl-u> 删除刚才新输入的字词
+"   ` 位于键盘左上角的反单引号键，用于中英文切换
 "   <Ctrl-e> 中英文标点切换
 "
 "   ' 单引号切换到临时英文，可在文件cy.cy当中的 EnChar 当中设置
 "   { 大括号切换到临时拼音 ，在文件cy.cy当中的 PyChar 当中设置
-"   输入大写英文字母自动切换到英文模式
+"   ` （位于键盘左上角的反单引号）输入大写英文字母自动切换到英文模式时返回中文模式
 
 "   - 向上翻页
 "   = 向下翻页
@@ -66,17 +66,37 @@
 "
 "  每次输入自动记录到名称为 y 的 register，从而可以随时调用。
 "
+" 致谢
+" ------------
+"  感谢 Vim 社区所有成员
 "
-" 注意事项
-" --------
-"
-"  避免和其它插件产生冲突，如果报错，请先暂停其它相关插件的使用
 "  }}}
 
 scriptencoding utf-8
 
-" 基本配置开始 {{{
-let g:cy_zhpunc = 1  " 设置默认中文标点输入开关, 1 为开, 默认中文标点, 0 为关，即英文标点
+" --------------------------------------------------------------------
+" 快捷键和参数设置 {{{
+"let s:cy_switch_key = "\<S-Space>"  "输入法开关
+let s:cy_switch_key = "\<A-x>"  "输入法开关
+let s:cy_switch_key2 = "\<C-\>"  "输入法开关
+let s:cy_find_input_key = "\<C-f>"    "设置搜索词
+let s:cy_cancle_key = "\<C-d>"   "取消当前输入
+let s:cy_input_pre_key = "\<C-s>"   "连续输入时只输入前置字符
+let s:cy_delete_key = "\<C-h>"   "删除前边的字母
+let s:cy_delete_key2 = "\<C-Space>"   "删除前边的字母
+let s:cy_puncp_key = "\<C-e>"   "中英文标点切换
+let s:cy_tocn_key = '`'  "位于键盘左上角的反单引号键，用于中英文切换
+let s:cy_jump_map_key = ',f'
+let s:cy_find_map_key = ',g'
+let s:cy_jump_key1 = ';f'
+let s:cy_jump_key2 = ';F'
+let s:cy_jump_key3 = ';t'
+let s:cy_third_cn = '"'
+let s:cy_four_cn = '\'
+let s:cy_five_cn = '|'
+
+" 基本参数设置 {{{
+let g:cy_zhpunc = 0  " 设置默认中文标点输入开关, 1 为开, 默认中文标点, 0 为关，即英文标点
 let g:cy_listmax = 10 " 候选项个数，最多 10 个
 let g:cy_esc_autoff = 0 " 设置离开插入模式时是否自动关闭. 1 为自动关闭, 0 为不关闭，保持输入状态
 let g:cy_autoinput = 1 " 设置是否自动上屏，1 为自动上屏，0 为不自动上屏
@@ -84,31 +104,12 @@ let g:cy_circlecandidates = 1 " 设为 1 表示可以在候选页中循环翻页
 let g:cy_helpim_on = 0  " 设为 1 表示打开反查码表的功能，即切换到拼音输入法之后，显示对应编码
 let g:cy_lockb = 1 "为 0 时, 在空码时不锁定键盘，可以继续输入，为 1 时，空码时停留在当前状态
 let g:cy_preconv = 'g2b' " 默认简繁转换方向
-let g:cy_conv = '' " 設置簡繁轉換方向, 'g2b' 為簡轉繁, 'b2g' 為繁轉簡, ''(留空)為關閉 
+let g:cy_conv = '' " 设置简繁转换方向，'g2b' 为简转繁，'b2g' 为繁转简, ''(留空)为关闭
 let g:cy_matchexact = 0  " 严格匹配
 let g:cy_gb = 0 " 是否只输入 gb2312 范围汉字
-let g:cy_reg_name = 'y'  " 默认使用的 register 名称
+let g:cy_reg_name = '+'  " 默认使用的 register 名称
 let g:cy_search_brave = 1 " 是否使用CY搜索方式，1 表示打开，0 表示关闭
 " 基本配置结束}}} 
-
-" --------------------------------------------------------------------
-" 快捷键和参数设置 {{{
-let s:cy_switch_key = "\<C-\>"  "输入法开关
-let s:cy_find_input_key = "\<C-f>"    "设置搜索词
-let s:cy_cancle_key = "\<C-d>"   "取消当前输入
-let s:cy_input_pre_key = "\<C-s>"   "连续输入时只输入前置字符
-let s:cy_delete_key = "\<A-h>"   "删除前边的字母
-let s:cy_delete_key2 = "\<C-Space>"   "删除前边的字母
-let s:cy_puncp_key = "\<C-e>"   "中英文标点切换
-let s:cy_tocn_key = '\'  "由大写字母切换到英文后返回中文的键
-let s:cy_jump_map_key = ',f'
-let s:cy_find_map_key = ',g'
-let s:cy_jump_key1 = 'f'
-let s:cy_jump_key2 = 'F'
-let s:cy_jump_key3 = 't'
-let s:cy_third_cn = '"'
-let s:cy_four_cn = '\'
-let s:cy_five_cn = '|'
 
 " 默认参数
 let s:varlst = [
@@ -136,6 +137,9 @@ let s:varlst = [
 " Map {{{
 execute 'imap <silent> '.s:cy_switch_key.' <C-R>=Cy_toggle()<CR><C-R>=Cy_toggle_post()<CR>'
 execute 'cmap <silent> '.s:cy_switch_key.' <C-R>=Cy_toggle()<CR><C-R>=Cy_toggle_post()<CR>'
+
+execute 'imap <silent> '.s:cy_switch_key2.' <C-R>=Cy_toggle()<CR><C-R>=Cy_toggle_post()<CR>'
+execute 'cmap <silent> '.s:cy_switch_key2.' <C-R>=Cy_toggle()<CR><C-R>=Cy_toggle_post()<CR>'
 
 execute 'nnoremap <silent> '.s:cy_jump_map_key.' :call CySearchF2(-1, -1, 0)<cr>'
 execute 'nnoremap <silent> '.s:cy_find_map_key." :execute '/'.g:cy_find_str<cr>"
@@ -701,9 +705,9 @@ endfunction "}}}
 function s:Cy_undomap(char) "{{{
     let move_left = strchars(a:char) - 1
     if move_left == 0
-        execute 'imap <A-u>  <ESC>vc'
+        execute 'imap <C-u>  <ESC>vc'
     else
-        execute 'imap <A-u>  <ESC>v'.move_left.'hc'
+        execute 'imap <C-u>  <ESC>v'.move_left.'hc'
     endif
 endfunction "}}}
 
@@ -1067,7 +1071,7 @@ function s:Cy_char(key) "{{{
             let temp_char2 = ''
             call <SID>Cy_undomap(buffer_char)
             return buffer_char.<SID>Cy_ReturnChar()
-        elseif keycode == char2nr(s:cy_switch_key)  "switch status
+        elseif keycode == char2nr(s:cy_switch_key) || keycode == char2nr(s:cy_switch_key2) "switch status
             if len(old_char) == maxcodes
                 let buffer_char = temp_char
             else
@@ -1082,6 +1086,9 @@ function s:Cy_char(key) "{{{
             return <SID>Cy_ReturnChar()
         elseif keycode == char2nr(s:cy_cancle_key)  " cancle input
             return <SID>Cy_ReturnChar()
+        "elseif keycode == char2nr(s:cy_switch_key)  " cancle input
+            "return <SID>Cy_ReturnChar()
+ 
         elseif s:cy_pgbuf[s:cy_pagenr] != [] "return first word and key
             if key=="\<Esc>"
                 return key
@@ -1175,10 +1182,48 @@ function s:Cy_ReturnChar(...) "{{{
     return sb
 endfunction "}}}
 
+function! CY_TabLabel()
+	let label = tabpagenr().':'
+	let bufnrlist = tabpagebuflist(v:lnum)
+
+	" Add '+' if one of the buffers in the tab page is modified
+	for bufnr in bufnrlist
+		if getbufvar(bufnr, "&modified")
+			let label .= '+ '
+			break
+		endif
+	endfor
+    "try
+        let path = fnamemodify(bufname(bufnrlist[tabpagewinnr(v:lnum)-1]), ":h").'/title'
+        if filereadable(path)
+            let title = readfile(path)[0]
+            return label . title
+        else
+            return label . fnamemodify(bufname(bufnrlist[tabpagewinnr(v:lnum)-1]), ":t")
+        endif
+    "finally
+        " Append the buffer name
+    "    return label . fnamemodify(bufname(bufnrlist[tabpagewinnr(v:lnum)-1]), ":t")
+    "endtry
+endfunction
+function! CY_Status()
+	"let bufnrlist = tabpagebuflist(v:lnum)
+    let path = fnamemodify(bufname('%'), ":h").'/title'
+    if filereadable(path)
+        let title = readfile(path)[0]
+        return title
+    else
+        return ''
+    endif
+endfunction
+
 function CY_Firefox(path) "{{{
-    let g:file_title = readfile(a:path)[0]
-    set statusline=%{g:file_title}\ [%t]\ %<\ %h%m%r%=%-14.(%l,%c%)\ %P\ [buf\ %n\ ]
+    "let g:file_title = readfile(a:path)[0]
+"    set guitablabel=%{CY_TabLabel()}
+"    set statusline=%{CY_Status()}\ [%t]\ %<\ %h%m%r%=%-14.(%l,%c%)\ %P
+    "set statusline=%!CY_Status()
 endfunction "}}}
+
 
 function Cy_toggle() "{{{
     if !exists("s:cy_ims")

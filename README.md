@@ -1,7 +1,12 @@
 穿越中文输入法
 ==============
 
-主页： http://2081.baow.com
+简介
+----
+
+Vim 编辑器中的中文输入法。
+
+主页： http://www.baow.com/help/cyim/
 
 Vim主页： http://www.vim.org/scripts/script.php?script_id=4271
 
