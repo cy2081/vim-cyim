@@ -5,7 +5,7 @@
 " Release Version: 3.6
 " License: GPL
 "
-" 主页：http://www.baow.com/help/cyim
+" 主页：http://vim.baow.com/cyim
 "
 " {{{
 "
