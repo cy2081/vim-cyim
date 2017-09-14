@@ -6,7 +6,7 @@
 
 Vim 编辑器中的中文输入法。
 
-主页： http://www.baow.com/help/cyim/
+主页： http://vim.baow.com/cyim
 
 Vim主页： http://www.vim.org/scripts/script.php?script_id=4271
 
