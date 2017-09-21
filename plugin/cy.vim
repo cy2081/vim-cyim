@@ -1,8 +1,8 @@
 " CY Input Method for Chinese
 " 穿越中文输入法 (Vim 版本)
 " Author: Cyrus Baow <cy@baow.com>
-" Last Change:	2014-12-08 
-" Release Version: 3.6
+" Last Change:	2017-09-21 
+" Release Version: 3.7
 " License: GPL
 "
 " 主页：http://vim.baow.com/cyim
@@ -22,7 +22,7 @@
 " 快捷键
 " ------
 "
-"   <Alt-x> 默认输入法开关，在终端模式中，可设置为 <Ctrl-\> 等
+"   <Alt-i> 默认输入法开关，在终端模式中，可设置为 <Ctrl-\> 等
 "   <Ctrl-d> 取消当前的中文候选
 "
 "   <Ctrl-h> 和 <Backspace> 一样，用于删除前边输入的字母，为了方便
@@ -77,7 +77,7 @@ scriptencoding utf-8
 " --------------------------------------------------------------------
 " 快捷键和参数设置 {{{
 "let s:cy_switch_key = "\<S-Space>"  "输入法开关
-let s:cy_switch_key = "\<A-x>"  "输入法开关
+let s:cy_switch_key = "\<A-i>"  "输入法开关
 let s:cy_switch_key2 = "\<C-\>"  "输入法开关
 let s:cy_find_input_key = "\<C-f>"    "设置搜索词
 let s:cy_cancle_key = "\<C-d>"   "取消当前输入
@@ -107,7 +107,7 @@ let g:cy_preconv = 'g2b' " 默认简繁转换方向
 let g:cy_conv = '' " 设置简繁转换方向，'g2b' 为简转繁，'b2g' 为繁转简, ''(留空)为关闭
 let g:cy_matchexact = 0  " 严格匹配
 let g:cy_gb = 0 " 是否只输入 gb2312 范围汉字
-let g:cy_reg_name = '+'  " 默认使用的 register 名称
+let g:cy_reg_name = 'y'  " 默认使用的 register 名称
 let g:cy_search_brave = 1 " 是否使用CY搜索方式，1 表示打开，0 表示关闭
 " 基本配置结束}}} 
 
