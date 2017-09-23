@@ -32,6 +32,3 @@ https://github.com/cy2081/cyim-emacs
 * Linux Fcitx 版本
 请把 fcitx/table 中的文件， 复制到主目录中的 .config/fcitx/table 中。可能需要重启fcitx，然后选择穿越中文输入法。
 
-* Windows 版本
-
-请从 http://ddeb.ys168.com/ 安装兼容的奔腾输入法。

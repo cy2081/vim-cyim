@@ -2,7 +2,6 @@
 - [Android 手机](#sec-2)
 - [Emacs版本](#sec-3)
 - [Linux Fcitx 版本](#sec-4)
-- [Windows 版本](#sec-5)
 
 **穿越中文输入法 Vim 版本**
 
@@ -38,7 +37,3 @@ Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 # Linux Fcitx 版本<a id="sec-4"></a>
 
 请把 fcitx/table 中的文件， 复制到主目录中的 .config/fcitx/table 中。可能需要重启fcitx，然后选择穿越中文输入法。
-
-# Windows 版本<a id="sec-5"></a>
-
-请从 <http://ddeb.ys168.com/> 安装兼容的奔腾输入法。
