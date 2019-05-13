@@ -1,0 +1,71 @@
+扩展使用
+########
+
+穿越输入法当中用到的码表文件是cy.cy，直接可以用Vim编辑，其中你可以添加或修改自己的词汇。也可以转换成其它输入法的码表文件，然后就可以在Linux或Windows系统中像其它输入法一样使用了。
+
+当然也可以在Android手机中Vim环境下使用，比如在Android手机中，通过安装Termux中的Vim，就可以方便的输入了，当然可以配合黑客键盘（Hacker's Keyboard）。
+
+\ **颜色风格**\ 
+
+以下是颜色风格文件，下载后放到 Vim 的 colors 目录下。当切换到中文状态时，自动变换光标颜色。
+
+*  `cyim <../20121019183621/cyim.vim>`_  ：暗色调风格
+*  `cyim-light <../20130522092739/cyim-light.vim>`_  ：明亮色调风格
+
+参考链接:
+
+* https://termux.com/
+* https://github.com/klausw/hackerskeyboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. _安装文件 3.6: ../20141208151415/cyim-3.6.zip
+
+
+.. _ywvim: http://www.vim.org/scripts/script.php?script_id=2662
+
+
+.. _浅色风格: ../20130522092739/cyim-light.vim
+
+
+.. _颜色风格,背景暗: ../20121019183621/cyim.vim
+
+
+.. _小小输入法下载: http://yongim.ys168.com/
+
+
+.. _小小输入法论坛: http://yong.dgod.net/
+
+
+.. _Vim 编辑器: http://www.vim.org/
+
+
+.. _3.7: ../20170921210601/cyim-3.7.zip
+
+
+
+

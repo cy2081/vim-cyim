@@ -1,0 +1,64 @@
+联系作者
+########
+
+作者： 川月 （Cyrus Baow）
+
+Email： cy◎baow.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. _安装文件 3.6: ../20141208151415/cyim-3.6.zip
+
+
+.. _ywvim: http://www.vim.org/scripts/script.php?script_id=2662
+
+
+.. _浅色风格: ../20130522092739/cyim-light.vim
+
+
+.. _颜色风格,背景暗: ../20121019183621/cyim.vim
+
+
+.. _小小输入法下载: http://yongim.ys168.com/
+
+
+.. _小小输入法论坛: http://yong.dgod.net/
+
+
+.. _Vim 编辑器: http://www.vim.org/
+
+
+.. _3.7: ../20170921210601/cyim-3.7.zip
+
+
+
+

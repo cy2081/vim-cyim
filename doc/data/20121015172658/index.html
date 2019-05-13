@@ -1,0 +1,127 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>使用方法 &#8212; 穿越中文输入法</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="搜索定位" href="../20121017111833/index.html" />
+    <link rel="prev" title="下载安装" href="../20121015193920/index.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../20121017111833/index.html" title="搜索定位"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="../20121015193920/index.html" title="下载安装"
+             accesskey="P">上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">穿越中文输入法</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>使用方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p><strong>快捷键</strong></p>
+<p><code class="docutils literal"><span class="pre">&lt;Alt-i&gt;</span></code> Gvim中输入法开关，在终端中可换成 <code class="docutils literal"><span class="pre">Ctrl-\</span></code> 等类似方式</p>
+<p><code class="docutils literal"><span class="pre">&lt;Ctrl-d&gt;</span></code> 取消当前的中文候选</p>
+<p><code class="docutils literal"><span class="pre">&lt;Ctrl-h&gt;</span></code> 和 <code class="docutils literal"><span class="pre">&lt;Backspace&gt;</span></code> 一样，用于删除前边输入的字母，为了方便还可选用<code class="docutils literal"><span class="pre">&lt;Ctrl-Space&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">&lt;Ctrl-^&gt;</span></code> 显示菜单，通过输入括号当中的字符进行选择:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>(m) 码表切换（穿越，拼音）
+(.) 中英标点切换
+(p) 最大词长: 设为 1 为单字模试
+(g) gb2312开关: 滤掉 gb2312 范围内的汉字
+(c) 简繁转换开关
+(q) 退出
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">&lt;Ctrl-s&gt;</span></code> 连续输入时，把前置词上屏</p>
+<p><code class="docutils literal"><span class="pre">&lt;Ctrl-u&gt;</span></code> 删除刚才新输入的字词</p>
+<p><code class="docutils literal"><span class="pre">&lt;Ctrl-e&gt;</span></code> 中英文标点切换</p>
+<p><code class="docutils literal"><span class="pre">&lt;Ctrl-f&gt;</span></code> 设置搜索关键词，用第一个字符进行全屏定位</p>
+<p><code class="docutils literal"><span class="pre">,g</span></code>  开始搜索词汇</p>
+<p><code class="docutils literal"><span class="pre">,f</span></code>  开始全屏定位</p>
+<p><code class="docutils literal"><span class="pre">'</span></code>  单引号切换到临时英文，可在文件cy.cy当中的 EnChar 当中设置</p>
+<p><code class="docutils literal"><span class="pre">`</span></code>  位于键盘左上角的反单引号键，用于中英文切换</p>
+<p><code class="docutils literal"><span class="pre">{</span></code>  大括号切换到临时拼音 ，在文件cy.cy当中的 PyChar 当中设置</p>
+<p><code class="docutils literal"><span class="pre">-</span></code>  向上翻页</p>
+<p><code class="docutils literal"><span class="pre">=</span></code>  向下翻页</p>
+<p>空格或数字选字, 回车输英文</p>
+<p><code class="docutils literal"><span class="pre">'</span></code>  单引号选择第二候选词</p>
+<p><code class="docutils literal"><span class="pre">&quot;</span></code>  双引号选择第三候选词</p>
+<p><code class="docutils literal"><span class="pre">\</span></code>  反斜线选择第四候选词</p>
+<p><code class="docutils literal"><span class="pre">|</span></code>  竖线选择第五候选词</p>
+<p><code class="docutils literal"><span class="pre">f</span></code>  普通状态时，可进行中英文的全屏快速定位跳转</p>
+<p><code class="docutils literal"><span class="pre">t</span></code>  同 f，跳转后光标在字符的前边</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">內容目录</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../20121015193920/index.html">下载安装</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">使用方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../20121017111833/index.html">搜索定位</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../20121015181207/index.html">中文编码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../20121015194850/index.html">扩展使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../20121016010032/index.html">联系作者</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../20121017111833/index.html" title="搜索定位"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="../20121015193920/index.html" title="下载安装"
+             >上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">穿越中文输入法</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Cyrus Baow.
+      最后更新于 9月 23, 2017.
+    </div>
+  </body>
+</html>

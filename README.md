@@ -13,7 +13,7 @@
 
 # Vim 版本<a id="sec-1"></a>
 
-主页和帮助文档： <https://cy2081.github.io/cyim>
+主页和帮助文档： 见 doc 目录中的 index.html
 
 Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 
