@@ -5,7 +5,7 @@
 
 **穿越中文输入法 Vim 版本**
 
-作者： cy@baow.com
+作者： 1829233719@qq.com
 
 版本： 3.7
 
@@ -13,7 +13,7 @@
 
 # Vim 版本<a id="sec-1"></a>
 
-主页和帮助文档： <http://vim.baow.com/cyim>
+主页和帮助文档： <https://cy2081.github.io/cyim>
 
 Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 
