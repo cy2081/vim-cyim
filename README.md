@@ -10,15 +10,15 @@
 
 Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 
-# 安装方法
+### 安装方法
 
 把plugin目录下的文件复制到Vim的plugin目录下即可。
 
-# 中文编码
+### 中文编码
 
-请参考 [小小音形输入法](http://xxyx.ys168.com/)
+见 doc ，请参考 [小小音形输入法](http://xxyx.ys168.com/)
 
-# 快捷键
+### 快捷键
 
 `<Alt-i>` Gvim中输入法开关，在终端中可换成 Ctrl-\ 等类似方式
 
@@ -49,7 +49,7 @@ Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 
 `'` 单引号切换到临时英文，可在文件cy.cy当中的 EnChar 当中设置
 
-``` 位于键盘左上角的反单引号键，用于中英文切换
+` 位于键盘左上角的反单引号键，用于中英文切换
 
 `{` 大括号切换到临时拼音 ，在文件cy.cy当中的 PyChar 当中设置
 
