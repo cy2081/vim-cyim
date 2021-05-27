@@ -1,39 +1,72 @@
-- [Vim 版本](#sec-1)
-- [Android 手机](#sec-2)
-- [Emacs版本](#sec-3)
-- [Linux Fcitx 版本](#sec-4)
+[Emacs版本](https://github.com/cy2081/cyim-emacs)
 
-**穿越中文输入法 Vim 版本**
+**穿越中文输入法 Vim 版**
 
-作者： cy2081@sina.cn
+作者： huxifun@sina.com
 
-版本： 3.7
+版本： 4.0
 
 这是一种在 Vim 编辑器中使用的中文输入法，特点是简单易学，快速方便。
 
-# Vim 版本<a id="sec-1"></a>
-
-主页和帮助文档： 见 doc 目录中的 index.html
-
 Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 
-安装方法：
+# 安装方法
 
 把plugin目录下的文件复制到Vim的plugin目录下即可。
 
-使用方法：
+# 中文编码
 
--   默认切换开关： A-i 或 C-\\
--   详见说明文档
+请参考 [小小音形输入法](http://xxyx.ys168.com/)
 
-# Android 手机<a id="sec-2"></a>
+# 快捷键
 
-先安装Termux和黑客键盘（Hacker’s Keyboard），再安装Vim，同样复制plugin目录即可。
+`<Alt-i>` Gvim中输入法开关，在终端中可换成 Ctrl-\ 等类似方式
 
-# Emacs版本<a id="sec-3"></a>
+`<Ctrl-d>` 取消当前的中文候选
 
-<https://github.com/cy2081/cyim-emacs>
+`<Ctrl-h>` 和 <Backspace> 一样，用于删除前边输入的字母，为了方便还可选用<Ctrl-Space>
 
-# Linux Fcitx 版本<a id="sec-4"></a>
+`<Ctrl-^>` 显示菜单，通过输入括号当中的字符进行选择:
 
-请把 fcitx/table 中的文件， 复制到主目录中的 .config/fcitx/table 中。可能需要重启fcitx，然后选择穿越中文输入法。
+* (m) 码表切换（穿越，拼音）
+* (.) 中英标点切换
+* (p) 最大词长: 设为 1 为单字模试
+* (g) gb2312开关: 滤掉 gb2312 范围内的汉字
+* (c) 简繁转换开关
+* (q) 退出
+
+`<Ctrl-s>` 连续输入时，把前置词上屏
+
+`<Ctrl-u>` 删除刚才新输入的字词
+
+`<Ctrl-e>` 中英文标点切换
+
+`<Ctrl-f>` 设置搜索关键词，用第一个字符进行全屏定位
+
+`,g` 开始搜索词汇
+
+`,f` 开始全屏定位
+
+`'` 单引号切换到临时英文，可在文件cy.cy当中的 EnChar 当中设置
+
+``` 位于键盘左上角的反单引号键，用于中英文切换
+
+`{` 大括号切换到临时拼音 ，在文件cy.cy当中的 PyChar 当中设置
+
+`-` 向上翻页
+
+`=` 向下翻页
+
+空格或数字选字, 回车输英文
+
+`'` 单引号选择第二候选词
+
+`"` 双引号选择第三候选词
+
+`\` 反斜线选择第四候选词
+
+`|` 竖线选择第五候选词
+
+`f` 普通状态时，可进行中英文的全屏快速定位跳转
+
+`t` 同 f，跳转后光标在字符的前边

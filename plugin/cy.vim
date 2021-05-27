@@ -1,11 +1,11 @@
 " CY Input Method for Chinese
 " 穿越中文输入法 (Vim 版本)
-" Author: Cyrus Baow <cy@baow.com>
-" Last Change:	2017-09-21 
-" Release Version: 3.7
+" Author: huxifun@sina.com
+" Last Change:	2021-05-27 
+" Release Version: 4.0
 " License: GPL
 "
-" 主页：http://vim.baow.com/cyim
+" 主页：https://github.com/cy2081/vim-cyim
 "
 " {{{
 "
@@ -78,7 +78,7 @@ scriptencoding utf-8
 " 快捷键和参数设置 {{{
 "let s:cy_switch_key = "\<S-Space>"  "输入法开关
 let s:cy_switch_key = "\<A-i>"  "输入法开关
-let s:cy_switch_key2 = "\<C-\>"  "输入法开关
+let s:cy_switch_key2 = "\<C-z>"  "输入法开关
 let s:cy_find_input_key = "\<C-f>"    "设置搜索词
 let s:cy_cancle_key = "\<C-d>"   "取消当前输入
 let s:cy_input_pre_key = "\<C-s>"   "连续输入时只输入前置字符
