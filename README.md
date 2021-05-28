@@ -20,7 +20,7 @@ Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 
 ### 快捷键
 
-`<Alt-i>` Gvim中输入法开关，在终端中可换成 Ctrl-z 等类似方式
+`<Alt-i>` 或 `<Ctrl-z>` 输入法开关
 
 `<Ctrl-d>` 取消当前的中文候选
 
@@ -49,9 +49,9 @@ Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 
 `'` 单引号切换到临时英文，可在文件cy.cy当中的 EnChar 当中设置
 
-`^` 用于中英文切换
-
 `{` 大括号切换到临时拼音 ，在文件cy.cy当中的 PyChar 当中设置
+
+`^` 用于中英文切换
 
 `-` 向上翻页
 
