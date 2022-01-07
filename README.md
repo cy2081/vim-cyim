@@ -59,8 +59,6 @@ Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 
 空格或数字选字, 回车输英文
 
-`'` 单引号选择第二候选词
-
 `"` 双引号选择第三候选词
 
 `\` 反斜线选择第四候选词
