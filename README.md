@@ -4,7 +4,7 @@
 
 作者： huxifun@sina.com
 
-版本： 5.0
+版本： 5.1
 
 这是一种在 Vim 编辑器中使用的中文输入法，特点是简单易学，快速方便，主要为了方便软件开发人员使用。
 
@@ -16,9 +16,7 @@ Vim主页： <http://www.vim.org/scripts/script.php?script_id=4271>
 
 ### 中文编码
 
-推荐：[超强快码](http://fds8866.ys168.com/)
-
-[小小音形输入法](http://xxyx.ys168.com/)
+见 doc ，请参考 [小小音形输入法](http://xxyx.ys168.com/)
 
 ### 快捷键
 
